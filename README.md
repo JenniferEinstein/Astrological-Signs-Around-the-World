@@ -1,3 +1,3 @@
-# Whats My...Signs?
+# What's My...Signs?
 Your zodiac signs around the world....
 You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Jewish calendar as well. Not necessarily. This app will explore how different calendars around the world caegorzie you according to your date of birth.
