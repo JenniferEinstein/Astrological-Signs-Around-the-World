@@ -1,0 +1,93 @@
+.header{
+    background-color: dodgerblue;
+    color: snow;
+    text-align: center;
+
+    grid-area: header;
+    padding-bottom: 5%;
+    padding: left 0;
+}
+
+section.main {
+    background-color: lightcyan;
+    grid-area: main;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* from code-box.com/create-grid-javascript/ */
+#grid {
+    display: grid; grid-template-columns: auto auto;
+}
+
+
+/* from sebhastian.com/html-hover-text */
+.hovertext01 {
+    position: relative;
+    border-bottom: 1px dotted black;
+}
+
+.hovertext01:hover:before {
+    content:attr(data-hover);
+    visibility: hidden;   /* it is there all the tiome, but we don't see it all the time */
+    opacity: 0;
+    width: max-content;  /* dynamically resizes content */
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
+
+    position: absolute;  /* so it can be displayed outside of the document flow */
+    z-index: 1;  /* so it appears over other text */
+    left: 0;
+    top: 110%;
+}
+
+.hovertext01:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: smaller ;
+    text-align: center  ;
+
+}
+
+.previous {
+    background-color: lightblue;
+    grid-area: previous;
+}
+
+.aside {
+    background-color: lightblue;
+    grid-area: aside;
+}
+
+body {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    
+    grid-template-areas: 
+    "header header header"
+    "aside main previous"
+    "convert main ." 
+}
+
+
+
+.hidden{
+    display:none
+}
+ 
+
+
+
+    
