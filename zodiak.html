@@ -12,30 +12,32 @@
     <header class="header">
         <h1 class="title">Zodiac Zodiak</h1>
     </header>
-<main class="main">
-    <section>
-        <p></p>
-        <form class="form">
-            <label for="birthday">What is your birth date on the <span style="color:green" id="gregorian" class="hovertext01" data-hover="The Gregorian calendar is used in most parts of the world today.">Gregorian Calendar?</span></label>
-            <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
-            <input type="submit" value="Process Birthday"/>
-            <!-- <input type="button" value="Submit" /> -->
+    <main class="main">
+        <section>
+            <p></p>
+            <form class="form">
+                <label for="birthday">What is your birth date on the <span style="color:green" id="gregorian" class="hovertext01" data-hover="The Gregorian calendar is used in most parts of the world today.">Gregorian Calendar?</span></label>
+                <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
+                <input type="submit" value="Process Birthday"/>
+                <!-- <input type="button" value="Submit" /> -->
 
-        </form>
-    </section>    
+            </form>
+        </section>    
+    
     <section id="answer" name="answer" class="answer">
 
 <p>Since your Gregorian birthday is on <span id=birthdayG></span>, your birthday on the Hebrew calendar is <span id="birthdayH"></span></p>.
-<p>On the Chinese Calendar, you were born in . . .  <span id="cYear"></span>.</p>
+<p>On the Chinese Calendar, you were born in . . .  <span id="chineseYear"></span>.</p>
 
     </section>
-</main>    
 
 
 
-<div id="grid"></div>
+
+<!-- <div id="grid"></div> -->
 
 <aside>
+    <p style="font-size: 2in;"></p>
     <form class="form">
         <label for="email">If you'd like to stay in contact with us, please enter your email: </label>
         <input type="email" id="email" name="email"/>
@@ -44,14 +46,15 @@
     </form>
 </aside>
 <span><p></p></span>
-<aside>
+<div>
     <form class="form">
         <label for="search" placeholder="Search here" />
 
     </form>
-</aside>
+</div>
 <span><p></p></span>
 <div>
+</main>    
 <!-- 
 Celtic
 Dec 24 - Jan 20  Birch  / Stag or Deer
@@ -68,13 +71,14 @@ Sept 30 - Oct 27 Ivy    / Butterfly
 Oct 28 - Nov 24 Reed    / Wolf
 Nov 25 - Dec 23 Eider   / Hawk or Falcon
 
-
-    // .then((response) => response.json())
-    // .then (console.log("response",response)) -->
         </div>
-        <footer>
+
+
+            <footer font-size="smaller">
+            <hr id="footerHR" style="font-size:smaller;">
             <p>Author:  Jennifer Einstein<br>
                 <a href="jennifereinstein@pursuit.org">jennifereinstein@pursuit.org</a></p>
-        </footer>
-    </body>
+                <a href="/privacy.html">Privacy Policy</a>
+            </footer>
+    </body> 
 </html>
