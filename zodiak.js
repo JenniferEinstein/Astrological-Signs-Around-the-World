@@ -7,50 +7,32 @@
 
 
 // const birthday = new Date('1/01/1973') //why does this work?
-const birthday = document.getElementById("birthday").value;
-console.log(document.getElementById("birthday").value);
-let bYear = birthday.slice(0,4);
-let bMonthDay = birthday.slice(5,10);
-globalThis.birthDate = bYear+"-"+bMonthDay
+
+
+let bYear
+let bMonthDay 
+let birthDate = bYear+"-"+bMonthDay
+let birthday 
 
 let submission = document.querySelector(".form")
+
 submission.addEventListener("submit",(e) => {
     e.preventDefault();
-    const birthday = document.getElementById("birthday").value;
-    console.log(document.getElementById("birthday").value);
-    let bYear = birthday.slice(0,4);
-    let bMonthDay = birthday.slice(5,10);
-    globalThis.birthDate = bYear+"-"+bMonthDay
+    birthday = document.getElementById("birthday").value;
+    bYear = birthday.slice(0,4);
+    bMonth = birthday.slice(5,7);
+    bDay = birthday.slice(8,10)
+    bMonthDay = birthday.slice(5,10)
+    birthDate = bYear+"-"+bMonthDay
  
-console.log(bYear)
-console.log("month",bMonthDay)
-console.log("birthDate", globalThis.birthDate)
-console.log("birthday", birthday)
+    chineseYear(bYear)
+
+console.log(bYear)  //what will the year be defined as?
+console.log("month",bMonth)  //what will the month be defined as?
+console.log("day", bDay)  //what will the day be defined as?
+console.log("birthDate", birthDate)  //What is the birthDate variable?
+console.log("birthday", birthday)  //What is the birthday variable?
 })
-
-
-
-/*
-   console.log(birthday.getFullYear) //is not a Function at HTMLFormElement.<Anonymous.
-   y=document.getElementById("birthday").value.getFullYear();//is not a Function at HTMLFormElement.<Anonymous.
-   console.log(y)
-*/
-    // const x = new Date()  //this gives the current date
-    // document.getElementById("birthday").innerHTML=x.getFullYear();
-    // console.log("x",x)
-   
-
-    // let dateMonth = 1+(birthday.getMonth()); console.log("first instance of month",dateMonth)
-    // p=document.createElement(p).value("dateMonth");
-    // if(dateMonth<10){dateMonth = `0${dateMonth}`}; 
-    // console.log("month", dateMonth);
-
-    // let dateDay = birthday.getDate(); 
-    // if(dateDay<10){dateDay = `0${dateDay}`}; 
-    // console.log("day", dateDay);
-
-    // const dateYear = birthday.getYear(); console.log("year", dateYear);
-    // const dateFormatted = dateYear+"-"+dateMonth+"-"+dateDay; console.log("date",dateFormatted)
 
 
 
@@ -181,40 +163,56 @@ container.appendChild(cell);
 
 let label = document.querySelector("label")
 
+///============EVENT LISTENER HERE!!!!=========================
 
 //===================Get the Hebrew Date from Gregorian==========
 
 document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`,"Hello from the other side");
+    console.log(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`,"Hello from the other side birthdate");
 
-    console.log(`https://www.hebcal.com/converter?cfg=json&date=${document.querySelector("birthday".value)}&g2h=1&strict=1`,"Hello from the other side");
-
-} )
-
-//I am going to have to take the date given and change it from MMDD/YYYY to YYYY-MM-DD
-
-
+    // console.log(`https://www.hebcal.com/converter?cfg=json&date=${document.querySelector("#birthday").value}&g2h=1&strict=1`,"Hello from the other side birthday");
 
 
 //===========ask the program to get the result============
 
-
-
-fetch(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`)
+    fetch(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`)
     .then((response) => {     
 // Take the result and do something with it.
+
         console.log("Fetch was successful!");
         const answer =  response.json() //returns result, translated by JSON
-            ;
-        console.log("answer is", answer);
+        .then((response) => {
+                console.log(response)
+        }
+        )
       });
 
+} )
 
 
+
+//Alternate  method: using the async keyword because the promise of the fetch was not resolving.
+
+// document.querySelector("form").addEventListener("submit", async (event) => {
+//     event.preventDefault();
+//     const response = await fetch(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`)
+//     const data = await response.json()
+//     console.log(data)
+// })
 
     //==================Find zodiac animal of Hebrew Date==========
-const chineseYear = document.createElement("p")
+
+
+function chineseYear(bYear) {
+    if (bYear === 1900 | 1912| 1924 | 1936 | 1948 | 1960 | 1972 | 1984 | 1996 | 2008 | 2020 | 2032) {
+        document.getElementById("cYear").innerHTML = "the Year of the Rat"
+    } else if (bYear === 1901 |1913 |1925 |1937 | 1949| 1961 | 1973 |1985 | 1997 | 2009 | 2021 | 2033) {
+        document.getElementById("cYear").innerHTML = "the Year of the Ox"
+    }
+
+
+}
 
 //since the Chinese Zodiac is on a 12 year cycle, a function to iterate every 12 years should be helpful
 
@@ -250,10 +248,39 @@ const rat =
 
 
 /* =======didn't use=====
-class="hovertext01" data-hover="This is the data hover. See if i like it better." 
+ 
 
 */
 /* ==============date formatting didn't use=================
+
+
+/*
+   console.log(birthday.getFullYear) //is not a Function at HTMLFormElement.<Anonymous.
+   y=document.getElementById("birthday").value.getFullYear();//is not a Function at HTMLFormElement.<Anonymous.
+   console.log(y)
+
+
+
+*/
+
+    // const x = new Date()  //this gives the current date
+    // document.getElementById("birthday").innerHTML=x.getFullYear();
+    // console.log("x",x)
+   
+
+    // let dateMonth = 1+(birthday.getMonth()); console.log("first instance of month",dateMonth)
+    // p=document.createElement(p).value("dateMonth");
+    // if(dateMonth<10){dateMonth = `0${dateMonth}`}; 
+    // console.log("month", dateMonth);
+
+    // let dateDay = birthday.getDate(); 
+    // if(dateDay<10){dateDay = `0${dateDay}`}; 
+    // console.log("day", dateDay);
+
+    // const dateYear = birthday.getYear(); console.log("year", dateYear);
+    // const dateFormatted = dateYear+"-"+dateMonth+"-"+dateDay; console.log("date",dateFormatted)
+
+/*
 function leadingZeroMonth(dateMonth){
     return (dateMonth.getDate)
 }
@@ -303,4 +330,8 @@ function func() {
 // function mouseover(){
 //     document.getElementById("gregorian").style.color = "red"
 // }
+
+
+class="hovertext01" data-hover="This is the data hover. See if i like it better."
+
 */
