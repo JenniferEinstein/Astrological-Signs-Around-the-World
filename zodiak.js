@@ -1,7 +1,7 @@
 /* Plan:
 1. user puts in birthday
 2. program takes in the birthday
-    a. adds birthday to DOM 
+    a. adds birthday to DOM (but I can also do this from the API)
     b. sends it to API to get Hebrew birthday
         i. adds Hebrew birthday to the DOM
         ii. figures out what the Hebrew zodiac is. 
@@ -183,7 +183,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
     console.log(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`,"Hello from the other side birthdate");
 
-    // console.log(`https://www.hebcal.com/converter?cfg=json&date=${document.querySelector("#birthday").value}&g2h=1&strict=1`,"Hello from the other side birthday");
 
 
 //===========ask the program to get the result============
@@ -191,11 +190,25 @@ document.querySelector("form").addEventListener("submit", (event) => {
     fetch(`https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`)
     .then((response) => {     
 // Take the result and do something with it.
-
+        console.log("response",response)
         console.log("Fetch was successful!");
         const answer =  response.json() //returns result, translated by JSON
-        .then((response) => {
-                console.log(response)
+        .then((hebcal) => {
+             console.log("answer",hebcal)
+                document.getElementById("birthdayH").innerHTML=`${hebcal.hm} ${hebcal.hd}, ${hebcal.hy}.`
+                if (hebcal.gm = 1) {hebcal.gm = "January"}; 
+                if (hebcal.gm = 2) {hebcal.gm = "February"}; 
+                if (hebcal.gm = 3) {hebcal.gm = "March"}; 
+                if (hebcal.gm = 4) {hebcal.gm = "April"}; 
+                if (hebcal.gm = 5) {hebcal.gm = "May"}; 
+                if (hebcal.gm = 6) {hebcal.gm = "June"}; 
+                if (hebcal.gm = 7) {hebcal.gm = "July"}; 
+                if (hebcal.gm = 8) {hebcal.gm = "August"}; 
+                if (hebcal.gm = 9) {hebcal.gm = "September"}; 
+                if (hebcal.gm = 10) {hebcal.gm = "October"}; 
+                if (hebcal.gm = 11) {hebcal.gm = "November"}; 
+                if (hebcal.gm = 12) {hebcal.gm = "December"}; 
+                document.getElementById("birthdayG").innerHTML=`${hebcal.gm} ${hebcal.gd}, ${hebcal.gy}` 
         }
         )
       });
@@ -244,8 +257,43 @@ document.querySelector("form").addEventListener("submit", (event) => {
                                             }
 }
 
-  
-
+//========== 2nd Try Chinese Zodiac ===========
+//from JavaScript Kit, credit to Timothy Joko-Veltman, restlessperegrine@yahoo.com 
+function signs(birthday) {
+        let start = 1901, birthyear = bYear, date=bDay, month=bMonth;
+        console.log("start", start)
+        console.log("birthyear",birthyear)
+    {   
+    if (month == 1 && date >=20 || month == 2 && date <=18) {value = "Aquarius";}
+    if (month == 2 && date >=19 || month == 3 && date <=20) {value = "Pisces";}
+    if (month == 3 && date >=21 || month == 4 && date <=19) {value = "Aries";}
+    if (month == 4 && date >=20 || month == 5 && date <=20) {value = "Taurus";}
+    if (month == 5 && date >=21 || month == 6 && date <=21) {value = "Gemini";}
+    if (month == 6 && date >=22 || month == 7 && date <=22) {value = "Cancer";}
+    if (month == 7 && date >=23 || month == 8 && date <=22) {value = "Leo";}
+    if (month == 8 && date >=23 || month == 9 && date <=22) {value = "Virgo";}
+    if (month == 9 && date >=23 || month == 10 && date <=22) {value = "Libra";}
+    if (month == 10 && date >=23 || month == 11 && date <=21) {value = "Scorpio";}
+    if (month == 11 && date >=22 || month == 12 && date <=21) {value = "Sagittarius";}
+    if (month == 12 && date >=22 || month == 1 && date <=19) {value = "Capricorn";}
+    }
+    x = (start - birthyear) % 12
+    with (document.zodiac.csign){
+    if (x == 1 || x == -11) {value = "Rat";}
+    if (x == 0) {value = "Ox";}
+    if (x == 11 || x == -1) {value = "Tiger";}
+    if (x == 10 || x == -2) {value = "Rabbit";}
+    if (x == 9 || x == -3)  {value = "Dragon";}
+    if (x == 8 || x == -4)  {value ="Snake";}
+    if (x == 7 || x == -5)  {value = "Horse";}
+    if (x == 6 || x == -6)  {value = "Sheep";}
+    if (x == 5 || x == -7)  {value = "Monkey";}
+    if (x == 4 || x == -8)  {value = "Cock";}
+    if (x == 3 || x == -9)  {value = "Dog";}
+    if (x == 2 || x == -10)  {value = "Pig";}  
+    
+    }
+    }
 
 
 //since the Chinese Zodiac is on a 12 year cycle, a function to iterate every 12 years should be helpful. It was not.
@@ -258,7 +306,6 @@ What am I trying to do here? I want to get all the years for each Chinese Zodiac
 
 //=================== Gregorian Calendar ===============
 //explain Gregorian Calendar. Put an I next to Gregorian and do a mouseover listener? link to somewhere for more information? I tried many ways on my own. It turns out that it was a capitalization error possibly. I found that I could use the title attribute to do this. But then I couldn't use CSS or a link.
-
 
 /* =================== Footer ====
 
@@ -276,6 +323,7 @@ cell.innerText = "TEXT2";
 container.appendChild(cell);
 
 
+    // console.log(`https://www.hebcal.com/converter?cfg=json&date=${document.querySelector("#birthday").value}&g2h=1&strict=1`,"Hello from the other side birthday");
 
 
 ====footer====
