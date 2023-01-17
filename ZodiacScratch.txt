@@ -87,3 +87,65 @@ if (x == 2 || x == -10)  {value = "Boar";}
 <p align="center">This free script provided by<br />
 <a href="http://www.javascriptkit.com">JavaScript
 Kit</a></p>
+
+//========== 2nd Try Chinese Zodiac ===========
+//from JavaScript Kit, credit to Timothy Joko-Veltman, restlessperegrine@yahoo.com
+
+//function changeDateFormat(date){}
+
+//Challenge: When I first tried this method, I didn't get leading zeroes, so I went back and added that to the month and day when necessary.
+//Challenge: for some reason, my month is one less than it should be. Apparently, this is a known issues since the months are base 10 and start at 0. I will add one.
+//Challenge. I cannot use the variable outside of the function. Changing let to var didn't work. Eventually used globalThis.
+
+// const birthday = new Date('1/01/1973') //why does this work?
+
+
+
+
+function signs(birthday) {
+  let start = 1901,
+    birthyear = bYear,
+    date = bDay,
+    month = bMonth;
+  console.log("start", start);
+  console.log("birthyear", birthyear);
+  {
+}
+
+
+    if ((month == 1 && date >= 20) || (month == 2 && date <= 18)) {
+      value = "Aquarius";
+    }
+    if ((month == 2 && date >= 19) || (month == 3 && date <= 20)) {
+      value = "Pisces";
+    }
+    if ((month == 3 && date >= 21) || (month == 4 && date <= 19)) {
+      value = "Aries";
+    }
+    if ((month == 4 && date >= 20) || (month == 5 && date <= 20)) {
+      value = "Taurus";
+    }
+    if ((month == 5 && date >= 21) || (month == 6 && date <= 21)) {
+      value = "Gemini";
+    }
+    if ((month == 6 && date >= 22) || (month == 7 && date <= 22)) {
+      value = "Cancer";
+    }
+    if ((month == 7 && date >= 23) || (month == 8 && date <= 22)) {
+      value = "Leo";
+    }
+    if ((month == 8 && date >= 23) || (month == 9 && date <= 22)) {
+      value = "Virgo";
+    }
+    if ((month == 9 && date >= 23) || (month == 10 && date <= 22)) {
+      value = "Libra";
+    }
+    if ((month == 10 && date >= 23) || (month == 11 && date <= 21)) {
+      value = "Scorpio";
+    }
+    if ((month == 11 && date >= 22) || (month == 12 && date <= 21)) {
+      value = "Sagittarius";
+    }
+    if ((month == 12 && date >= 22) || (month == 1 && date <= 19)) {
+      value = "Capricorn";
+    }

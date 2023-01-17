@@ -10,13 +10,7 @@
         i. puts into the DOM: year of the ANIMAL
 */
 
-//function changeDateFormat(date){}
-
-//Challenge: When I first tried this method, I didn't get leading zeroes, so I went back and added that to the month and day when necessary.
-//Challenge: for some reason, my month is one less than it should be. Apparently, this is a known issues since the months are base 10 and start at 0. I will add one.
-//Challenge. I cannot use the variable outside of the function. Changing let to var didn't work. Eventually used globalThis.
-
-// const birthday = new Date('1/01/1973') //why does this work?
+/*========== Create Variables ========*/
 
 let bYear;
 let bMonthDay;
@@ -25,30 +19,29 @@ let birthday;
 
 let submission = document.querySelector(".form");
 
+/*========== Event Listener I ========*/
 submission.addEventListener("submit", (e) => {
   e.preventDefault();
 
   birthday = document.getElementById("birthday").value;
   bYear = birthday.slice(0, 4);
-  bMonth = birthday.slice(5, 7);
-  bDay = birthday.slice(8, 10);
-  bMonthDay = birthday.slice(5, 10);
-  birthDate = bYear + "-" + bMonthDay;
+  bMonth = birthday.slice(5, 7); console.log("bMonth is ", bMonth)
+  bDay = birthday.slice(8, 10); 
+  bMonthDay = birthday.slice(5, 10); console.log("bMonthDay is ", bMonthDay)
+  birthDate = bYear + "-" + bMonthDay; console.log("birthDate is ",birthDate)
 
   let birthdayG;
-  let birthdayH;
+  
   try {
-    birthdayG = bMonthDay + ", " + bYear;
+    birthdayG = (bMonth + " " + bDay + ", " + bYear + ",");
+    console.log("birthday G is ", birthdayG)
     document.getElementById("birthdayG").innerHTML(birthdayG);
   } catch (error) {
     ("There has been an error before line 50");
   }
   //chineseYear(bYear);  //this calls the chineseYear function
-  // ratYear(bYear);
-  // oxYear(bYear);
-  // tigerYear(bYear);
-
   yearOfThe(bYear);
+ 
   console.log(bYear); //what will the year be defined as?
   console.log("month", bMonth); //what will the month be defined as?
   console.log("day", bDay); //what will the day be defined as?
@@ -58,58 +51,53 @@ submission.addEventListener("submit", (e) => {
 
 //==================Determine Gregorian Zodiac Sign==========
 
-// const daysGZ=[21,]
-// const signsGZ=["Aries"]
 
-// JavaScript program to display astrological sign
-// or Zodiac sign for given date of birth
-
-// Function to calculate sum
-// digits of n
-function zodiac_sign(day, month) {
+function gregorian_sign(bDay, bMonth) {
   let astro_sign = "";
 
   // checks month and date within the
   // valid range of a specified zodiac
-  if (month == "december") {
-    if (day < 22) astro_sign = "Sagittarius";
-    else astro_sign = "capricorn";
-  } else if (month == "january") {
-    if (day < 20) astro_sign = "Capricorn";
-    else astro_sign = "aquarius";
-  } else if (month == "february") {
-    if (day < 19) astro_sign = "Aquarius";
-    else astro_sign = "pisces";
-  } else if (month == "march") {
-    if (day < 21) astro_sign = "Pisces";
-    else astro_sign = "aries";
-  } else if (month == "april") {
-    if (day < 20) astro_sign = "Aries";
-    else astro_sign = "taurus";
-  } else if (month == "may") {
-    if (day < 21) astro_sign = "Taurus";
-    else astro_sign = "gemini";
-  } else if (month == "june") {
-    if (day < 21) astro_sign = "Gemini";
-    else astro_sign = "cancer";
-  } else if (month == "july") {
-    if (day < 23) astro_sign = "Cancer";
-    else astro_sign = "leo";
-  } else if (month == "august") {
-    if (day < 23) astro_sign = "Leo";
-    else astro_sign = "virgo";
-  } else if (month == "september") {
-    if (day < 23) astro_sign = "Virgo";
-    else astro_sign = "libra";
-  } else if (month == "october") {
-    if (day < 23) astro_sign = "Libra";
-    else astro_sign = "scorpio";
-  } else if (month == "november") {
-    if (day < 22) astro_sign = "scorpio";
-    else astro_sign = "sagittarius";
+  if (bMonth == "12") {
+    if (bDay < 22) astro_sign = "Sagittarius";
+    else astro_sign = "Capricorn";
+  } else if (bMonth == "01") {
+    if (bDay < 20) astro_sign = "Capricorn";
+    else astro_sign = "Aquarius";
+  } else if (bMonth == "02") {
+    if (bDay < 19) astro_sign = "Aquarius";
+    else astro_sign = "Pisces";
+  } else if (bMonth == "03") {
+    if (bDay < 21) astro_sign = "Pisces";
+    else astro_sign = "Aries";
+  } else if (bMonth == "04") {
+    if (bDay < 20) astro_sign = "Aries";
+    else astro_sign = "Taurus";
+  } else if (bMonth == "05") {
+    if (bDay < 21) astro_sign = "Taurus";
+    else astro_sign = "Gemini";
+  } else if (bMonth == "06") {
+    if (bDay < 21) astro_sign = "Gemini";
+    else astro_sign = "Cancer";
+  } else if (bMonth == "07") {
+    if (bDay < 23) astro_sign = "Cancer";
+    else astro_sign = "Leo";
+  } else if (bMonth == "08") {
+    if (bDay < 23) astro_sign = "Leo";
+    else astro_sign = "Virgo";
+  } else if (bMonth == "09") {
+    if (bDay < 23) astro_sign = "Virgo";
+    else astro_sign = "Libra";
+  } else if (bMonth == "10") {
+    if (bDay < 23) astro_sign = "Libra";
+    else astro_sign = "Scorpio";
+  } else if (bMonth == "11") {
+    if (bDay < 22) astro_sign = "Scorpio";
+    else astro_sign = "Sagittarius";
   }
 
-  document.write(astro_sign);
+
+
+
 }
 
 //===============Creating Elements============
@@ -145,48 +133,55 @@ document.querySelector("form").addEventListener("submit", (event) => {
         document.getElementById(
           "birthdayH"
         ).innerHTML = `${hebcal.hm} ${hebcal.hd}, ${hebcal.hy}.`;
-        if ((hebcal.gm = 1)) {
+        if ((hebcal.gm == 1)) {
           hebcal.gm = "January";
         }
-        if ((hebcal.gm = 2)) {
+        if ((hebcal.gm == 2)) {
           hebcal.gm = "February";
         }
-        if ((hebcal.gm = 3)) {
+        if ((hebcal.gm == 3)) {
           hebcal.gm = "March";
         }
-        if ((hebcal.gm = 4)) {
+        if ((hebcal.gm == 4)) {
           hebcal.gm = "April";
         }
-        if ((hebcal.gm = 5)) {
+        if ((hebcal.gm == 5)) {
           hebcal.gm = "May";
         }
-        if ((hebcal.gm = 6)) {
+        if ((hebcal.gm == 6)) {
           hebcal.gm = "June";
         }
-        if ((hebcal.gm = 7)) {
+        if ((hebcal.gm == 7)) {
           hebcal.gm = "July";
         }
-        if ((hebcal.gm = 8)) {
+        if ((hebcal.gm == 8)) {
           hebcal.gm = "August";
         }
-        if ((hebcal.gm = 9)) {
+        if ((hebcal.gm == 9)) {
           hebcal.gm = "September";
         }
-        if ((hebcal.gm = 10)) {
+        if ((hebcal.gm == 10)) {
           hebcal.gm = "October";
         }
-        if ((hebcal.gm = 11)) {
+        if ((hebcal.gm == 11)) {
           hebcal.gm = "November";
         }
-        if ((hebcal.gm = 12)) {
+        if ((hebcal.gm == 12)) {
           hebcal.gm = "December";
         }
         document.getElementById(
           "birthdayG"
-        ).innerHTML = `${hebcal.gm} ${hebcal.gd}, ${hebcal.gy}`;
+        ).innerHTML = `${hebcal.gm} ${hebcal.gd}, ${hebcal.gy},`;
+
       });
   });
 });
+
+
+// <section id="signs">
+
+// <p id="hebrewSign">Your Astrological Sign on the Gregorian Calendar</p>
+// <p id="gregorianSign">Your Astrological Sign on the Hebrew Calendar</p>
 
 //==========Find zodiac animal of Chinese Calender======
 
@@ -382,93 +377,7 @@ function yearOfThe(bYear) {
   }
 }
 
-//========== 2nd Try Chinese Zodiac ===========
-//from JavaScript Kit, credit to Timothy Joko-Veltman, restlessperegrine@yahoo.com
-function signs(birthday) {
-  let start = 1901,
-    birthyear = bYear,
-    date = bDay,
-    month = bMonth;
-  console.log("start", start);
-  console.log("birthyear", birthyear);
-  {
-    if ((month == 1 && date >= 20) || (month == 2 && date <= 18)) {
-      value = "Aquarius";
-    }
-    if ((month == 2 && date >= 19) || (month == 3 && date <= 20)) {
-      value = "Pisces";
-    }
-    if ((month == 3 && date >= 21) || (month == 4 && date <= 19)) {
-      value = "Aries";
-    }
-    if ((month == 4 && date >= 20) || (month == 5 && date <= 20)) {
-      value = "Taurus";
-    }
-    if ((month == 5 && date >= 21) || (month == 6 && date <= 21)) {
-      value = "Gemini";
-    }
-    if ((month == 6 && date >= 22) || (month == 7 && date <= 22)) {
-      value = "Cancer";
-    }
-    if ((month == 7 && date >= 23) || (month == 8 && date <= 22)) {
-      value = "Leo";
-    }
-    if ((month == 8 && date >= 23) || (month == 9 && date <= 22)) {
-      value = "Virgo";
-    }
-    if ((month == 9 && date >= 23) || (month == 10 && date <= 22)) {
-      value = "Libra";
-    }
-    if ((month == 10 && date >= 23) || (month == 11 && date <= 21)) {
-      value = "Scorpio";
-    }
-    if ((month == 11 && date >= 22) || (month == 12 && date <= 21)) {
-      value = "Sagittarius";
-    }
-    if ((month == 12 && date >= 22) || (month == 1 && date <= 19)) {
-      value = "Capricorn";
-    }
-  }
-  x = (start - birthyear) % 12;
-  {
-    if (x == 1 || x == -11) {
-      value = "Rat";
-    }
-    if (x == 0) {
-      value = "Ox";
-    }
-    if (x == 11 || x == -1) {
-      value = "Tiger";
-    }
-    if (x == 10 || x == -2) {
-      value = "Rabbit";
-    }
-    if (x == 9 || x == -3) {
-      value = "Dragon";
-    }
-    if (x == 8 || x == -4) {
-      value = "Snake";
-    }
-    if (x == 7 || x == -5) {
-      value = "Horse";
-    }
-    if (x == 6 || x == -6) {
-      value = "Sheep";
-    }
-    if (x == 5 || x == -7) {
-      value = "Monkey";
-    }
-    if (x == 4 || x == -8) {
-      value = "Cock";
-    }
-    if (x == 3 || x == -9) {
-      value = "Dog";
-    }
-    if (x == 2 || x == -10) {
-      value = "Pig";
-    }
-  }
-}
+
 
 //since the Chinese Zodiac is on a 12 year cycle, a function to iterate every 12 years should be helpful. It was not.
 
@@ -485,7 +394,13 @@ What am I trying to do here? I want to get all the years for each Chinese Zodiac
 */
 
 /* ======= didn't use =====
- 
+   function addElement() {
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode(astro_sign);
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+  }
 /* ===================Grid========
 let container = document.getElementById("grid");
 let cell = document.createElement("div");
