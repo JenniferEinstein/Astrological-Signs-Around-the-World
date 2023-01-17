@@ -1,14 +1,14 @@
-# What's My...Signs?
+# What's My . . . Signs?
 
 Your zodiac signs around the world....
 You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Jewish calendar as well. Not necessarily. This app will explore how different calendars around the world categorize you according to your date of birth.
 >
->## Table of Contents
+## Table of Contents
 >
 |In this ReadMe|
 |:---|
 |Why this app?|
-|installation|
+|installation (tbd)|
 |Front-end Portfolio Project|
 |Accessibility|
 |Credits|
@@ -53,35 +53,35 @@ This project will:
 - There should be at least one way to incorrectly submit the form. When the form is incorrectly submitted, an error message should be added to the DOM for the user.
 - Based on a button click or form submission, an external API request must be made. Upon receiving a successful response, something visual on the page should change.
 >
->There are also interview requirements, which are outside the scope of this README.
+There are also interview requirements, which are outside the scope of this README.
 >
 ## Accessibility
 >
 > Keeping the following in mind:
 > Vision - Hearing - Mobility - Literacy
 >
-> My main goal is to make the app accessible to as many
-> users as possible, but secondary goals include being on
-> compliance with the American with Disabilities Act,
-> the Canadian Standard on Web Accessibility, and
-> guidelines stemming from the EU Web Accessibility
-> Directive, which are set to be enforcable by June 28, 2025.
+My main goal is to make the app accessible to as many
+users as possible, but secondary goals include being on
+compliance with the American with Disabilities Act,
+the Canadian Standard on Web Accessibility, and
+guidelines stemming from the EU Web Accessibility
+Directive, which are set to be enforcable by June 28, 2025.
 >
-> In this case, I focused on color contrasting, appropriate
-> labeling of navigation tags, and language.
+In this case, I focused on color contrasting, appropriate
+labeling of navigation tags, and language.
 >
-> Style guidelines were taken from the Human Interface
-> Guideslines from Apple.
+Style guidelines were taken from the Human Interface
+Guideslines from Apple.
 >
 ## Credits
 >
->How to Write an Awesome Readme, by Suraj Vishwakarma
->The Markdown Guide
->HebCal Converter
->Visual Studio Code
->Color Contrast Checker at <https://coolors.co/contrast-checker>
->Chinese Year at <https://chinese-year.com>
-> mdn web docs_ at <https://developer.mozilla.org>
->Juan Feliz
->npm Docs at <https://dpcsnpmjs.com>
+<li>How to Write an Awesome Readme, by Suraj Vishwakarma
+<li>[Markdown Guide](https://www.markdownguide.org)
+<li>[HebCal Converter](https://www.hebcal.com)
+<li>Visual Studio Code
+<li>[Color Contrast Checker](https://coolors.co/contrast-checker)
+<li>[Chinese Year](https://chinese-year.com)
+<li>[mdn web docs_ at](https://developer.mozilla.org)
+<li>Juan Feliz
+<li>[npm Docs](https://dpcsnpmjs.com)
 >
