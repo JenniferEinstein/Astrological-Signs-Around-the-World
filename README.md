@@ -8,6 +8,7 @@ You might think that if you are a water bearer on the Gregorian calendar, you wo
 |In this ReadMe|
 |:---|
 |Why this app?|
+|installation|
 |Front-end Portfolio Project|
 |Accessibility|
 |Credits|
@@ -18,7 +19,6 @@ As much as I enjoy mobile games, I admit that time spent on them can easily get 
 >
 ## Front-end Portfolio Project
 >
-
 WhatsMySigns is being created for an assignment for my fellowship at Pursuit Transformation Company. The fellowship is a 12-month, Google-funded software engineering fellowship with a 9% acceptance rate. Project-based curriculum provides hands-on experience with JavaScript, HTML, CSS, Node, Express, React/Redux, PostgreSQL, APIs, Git, Data Structures, Algorithms, sprints, Agile, code reviews, and pair programming.
 >
 This project will:
@@ -81,6 +81,7 @@ This project will:
 >Visual Studio Code
 >Color Contrast Checker at <https://coolors.co/contrast-checker>
 >Chinese Year at <https://chinese-year.com>
-> mdn web docs_
+> mdn web docs_ at <https://developer.mozilla.org>
 >Juan Feliz
+>npm Docs at <https://dpcsnpmjs.com>
 >

@@ -37,10 +37,16 @@ body {
     grid-template-areas: 
     "header header header"
     "aside main previous"
-    "footer footer footer" 
+    ". . footer" 
 }
 
-
+#gregorian:hover {
+    color:green;
+    max-width: fit-content;
+    /*
+    "The Gregorian calendar is a solar calendar with 12 months of 28–31 days eac and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for, and modification of, the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25."
+    */
+}
 section.main {
     background-color: lightcyan;
     grid-area: main;
