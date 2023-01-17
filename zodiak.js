@@ -25,23 +25,27 @@ submission.addEventListener("submit", (e) => {
 
   birthday = document.getElementById("birthday").value;
   bYear = birthday.slice(0, 4);
-  bMonth = birthday.slice(5, 7); console.log("bMonth is ", bMonth)
-  bDay = birthday.slice(8, 10); 
-  bMonthDay = birthday.slice(5, 10); console.log("bMonthDay is ", bMonthDay)
-  birthDate = bYear + "-" + bMonthDay; console.log("birthDate is ",birthDate)
+  bMonth = birthday.slice(5, 7);
+  console.log("bMonth is ", bMonth);
+  bDay = birthday.slice(8, 10);
+  bMonthDay = birthday.slice(5, 10);
+  console.log("bMonthDay is ", bMonthDay);
+  birthDate = bYear + "-" + bMonthDay;
+  console.log("birthDate is ", birthDate);
 
   let birthdayG;
-  
+
   try {
-    birthdayG = (bMonth + " " + bDay + ", " + bYear + ",");
-    console.log("birthday G is ", birthdayG)
+    birthdayG = bMonth + " " + bDay + ", " + bYear + ",";
+    console.log("birthday G is ", birthdayG);
     document.getElementById("birthdayG").innerHTML(birthdayG);
   } catch (error) {
     ("There has been an error before line 50");
   }
-  //chineseYear(bYear);  //this calls the chineseYear function
-  yearOfThe(bYear);
- 
+
+  yearOfThe(bYear); //calls function for Gregorian Zodiak
+  gregorian_sign(bDay, bMonth); //calls function for Zodiak
+
   console.log(bYear); //what will the year be defined as?
   console.log("month", bMonth); //what will the month be defined as?
   console.log("day", bDay); //what will the day be defined as?
@@ -51,12 +55,10 @@ submission.addEventListener("submit", (e) => {
 
 //==================Determine Gregorian Zodiac Sign==========
 
-
 function gregorian_sign(bDay, bMonth) {
   let astro_sign = "";
 
-  // checks month and date within the
-  // valid range of a specified zodiac
+  // checks month and date within the range of a specified zodiac
   if (bMonth == "12") {
     if (bDay < 22) astro_sign = "Sagittarius";
     else astro_sign = "Capricorn";
@@ -95,9 +97,9 @@ function gregorian_sign(bDay, bMonth) {
     else astro_sign = "Sagittarius";
   }
 
-
-
-
+  console.log("astro sign is", astro_sign); //this works
+  const gs = document.getElementById("gregorianSign");
+  gs.append(astro_sign); //this works
 }
 
 //===============Creating Elements============
@@ -109,7 +111,7 @@ let p = document.createElement("p");
 let label = document.querySelector("label");
 
 //============ EVENT LISTENER HERE!!!!==================
-//=========== Get the Hebrew Date from Gregorian ==========
+//=========== Get the Hebrew Date from Gregorian Date==========
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -129,65 +131,100 @@ document.querySelector("form").addEventListener("submit", (event) => {
     const answer = response
       .json() //returns result, translated by JSON
       .then((hebcal) => {
-        console.log("answer", hebcal);
+        console.log("hebcal=", hebcal);
         document.getElementById(
           "birthdayH"
         ).innerHTML = `${hebcal.hm} ${hebcal.hd}, ${hebcal.hy}.`;
-        if ((hebcal.gm == 1)) {
+        if (hebcal.gm == 1) {
           hebcal.gm = "January";
         }
-        if ((hebcal.gm == 2)) {
+        if (hebcal.gm == 2) {
           hebcal.gm = "February";
         }
-        if ((hebcal.gm == 3)) {
+        if (hebcal.gm == 3) {
           hebcal.gm = "March";
         }
-        if ((hebcal.gm == 4)) {
+        if (hebcal.gm == 4) {
           hebcal.gm = "April";
         }
-        if ((hebcal.gm == 5)) {
+        if (hebcal.gm == 5) {
           hebcal.gm = "May";
         }
-        if ((hebcal.gm == 6)) {
+        if (hebcal.gm == 6) {
           hebcal.gm = "June";
         }
-        if ((hebcal.gm == 7)) {
+        if (hebcal.gm == 7) {
           hebcal.gm = "July";
         }
-        if ((hebcal.gm == 8)) {
+        if (hebcal.gm == 8) {
           hebcal.gm = "August";
         }
-        if ((hebcal.gm == 9)) {
+        if (hebcal.gm == 9) {
           hebcal.gm = "September";
         }
-        if ((hebcal.gm == 10)) {
+        if (hebcal.gm == 10) {
           hebcal.gm = "October";
         }
-        if ((hebcal.gm == 11)) {
+        if (hebcal.gm == 11) {
           hebcal.gm = "November";
         }
-        if ((hebcal.gm == 12)) {
+        if (hebcal.gm == 12) {
           hebcal.gm = "December";
         }
         document.getElementById(
           "birthdayG"
         ).innerHTML = `${hebcal.gm} ${hebcal.gd}, ${hebcal.gy},`;
 
+        let chodesh = hebcal.hm;
+        console.log("Hebcal then Chodesh", hebcal.hm, chodesh);
+
+        function hebrew_sign(chodesh) {
+          //making and calling function for Hebrew Zodiak
+
+          let hAstro_sign = "";
+          if (chodesh == "Nisan") {
+            hAstro_sign = "Aries";
+          } else if ((chodesh = "Iyar")) {
+            hAstro_sign = "Taurus";
+          } else if ((chodesh = "Sivan")) {
+            hAstro_sign = "Gemini";
+          } else if ((chodesh = "Tammuz")) {
+            hAstro_sign = "Cancer";
+          } else if ((chodesh = "Av")) {
+            hAstro_sign = "Leo";
+          } else if ((chodesh = "Elul")) {
+            hAstro_sign = "Virgo";
+          } else if ((chodesh = "Tishrei")) {
+            hAstro_sign = "Libra";
+          } else if ((chodesh = "Chesvan")) {
+            hAstro_sign = "Scorpio";
+          } else if ((chodesh = "Kislev")) {
+            hAstro_sign = "Sagittarius";
+          } else if ((chodesh = "Tevet")) {
+            hAstro_sign = "Capricorn";
+          } else if ((chodesh = "Shevat")) {
+            hAstro_sign = "Aquarius";
+          } else if ((chodesh = "Adar")) {
+            hAstro_sign = "Pisces";
+          }
+
+          const hs = document.getElementById("hebrewSign");
+          hs.append(hAstro_sign);
+          //   if(astro_sign === hAstro_sign){
+          //     "is exactly the same!" }   this didn't work. Scope issue
+        }
+        hebrew_sign(chodesh);
       });
   });
 });
 
-
-// <section id="signs">
-
-// <p id="hebrewSign">Your Astrological Sign on the Gregorian Calendar</p>
 // <p id="gregorianSign">Your Astrological Sign on the Hebrew Calendar</p>
 
 //==========Find zodiac animal of Chinese Calender======
 
 function yearOfThe(bYear) {
-    bYear = parseInt(bYear, 10)
-    console.log("bYear is now a ", typeof bYear);
+  bYear = parseInt(bYear, 10);
+  console.log("bYear is now a ", typeof bYear);
   if (
     bYear === 1900 ||
     bYear === 1912 ||
@@ -377,8 +414,6 @@ function yearOfThe(bYear) {
   }
 }
 
-
-
 //since the Chinese Zodiac is on a 12 year cycle, a function to iterate every 12 years should be helpful. It was not.
 
 //split the birthday into the component parts.
@@ -510,4 +545,10 @@ function func() {
 // }
 
 
-class="hovertext01" data-hover="This is the data hover. See if i like it better." */
+class="hovertext01" data-hover="This is the data hover. See if i like it better." 
+
+This ended up being unweildy. In addition, it ran off the page.
+
+   <form class="form">
+                <label for="birthday">What is your birth date on the <span style="color:green" id="gregorian" display="block" class="hovertext01" data-hover="The Gregorian calendar...instead of 365.25.">Gregorian Calendar?</span></label>
+*/

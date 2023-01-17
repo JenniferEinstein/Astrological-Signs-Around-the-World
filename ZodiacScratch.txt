@@ -149,3 +149,59 @@ function signs(birthday) {
     if ((month == 12 && date >= 22) || (month == 1 && date <= 19)) {
       value = "Capricorn";
     }
+
+
+
+
+/* ================== HOVER TEXT ==================== */
+
+
+<!--               
+                <div class="myDiv">Gregorian Calendar</div>
+                <div class="hidden">"The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days."</div> -->
+This is CSS I did not use.
+
+#gregorian:hover  {
+    color:green;
+    max-width: fit-content;
+    /*
+    "The Gregorian calendar is a solar calendar with 12 months of 28–31 days eac and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for, and modification of, the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25."
+    */
+}
+
+/* from w3 Schools. how to display an element on hover. */
+.myDiv:hover + .hidden {
+    display: block;
+    color:crimson;
+    background: beige;
+}
+
+
+
+/* from sebhastian.com/html-hover-text */
+.hovertext01 {
+    position: relative;
+    border-bottom: 1px dotted black;
+}
+
+.hovertext01:hover:before {
+    content:attr(data-hover);
+    visibility: hidden;   /* it is there all the tiome, but we don't see it all the time */
+    opacity: 0;
+    width: max-content;  /* dynamically resizes content */
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
+    position: absolute;  /* so it can be displayed outside of the document flow */
+    z-index: 1;  /* so it appears over other text */
+    left: 0;
+    top: 110%;
+}
+
+.hovertext01:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
