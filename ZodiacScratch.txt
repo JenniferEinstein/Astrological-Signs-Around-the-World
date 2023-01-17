@@ -1,3 +1,22 @@
+================Celtic============
+Celtic
+Dec 24 - Jan 20  Birch  / Stag or Deer
+Jan 21 - Feb 17  Rowan  / Cat
+Feb 18 - Mar 17  Ash    / Snake (adder)
+Nar 18 - Apr 14  Alder  / Fox
+Apr 15 - May 12  Willow / Bull
+May 13 - June 9  Hawthorn / Seahorse
+Jun 10 - July 7  Oak    / Wren
+July 8 - Aug 4 Holly    / Horse
+Aug 5 - Sept 1 Hazel    / Salmon
+Sept 2 - Sept 29 Vine   / Swan
+Sept 30 - Oct 27 Ivy    / Butterfly
+Oct 28 - Nov 24 Reed    / Wolf
+Nov 25 - Dec 23 Eider   / Hawk or Falcon
+
+
+
+
 <script language="javascript">
 
 //Western & Chinese Astrological Sign Calculator- By Timothy Joko-Veltman
