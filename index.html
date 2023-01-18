@@ -2,69 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whats My Signs?</title>
-        <link rel="stylesheet" href="./style.css"/>
-    <script defer src="./zodiak.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Whats My Signs?</title>
+            <link rel="stylesheet" href="./style.css"/>
+            <script defer="defer" src="./zodiak.js"></script>
 </head>
-<body>
-    <header class="header">
-        <h1 class="title">What's My Signs?</h1>  </header>
-        <aside id="explain">You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Jewish calendar as well. Not necessarily. </aside>
-    <main class="main">
-        <article>
-        <section>
-
-
-    </section>
-</article>
-
-
-<div id="grid2">
-    <div class="head">
-         
+    <body>
+        <header class="header">
+            <h1 class="title">Your Astrological Signs Around the World</h1>  
+        </header>
+        <main class="main">
+            <div id="grid2">
+                <div class="head">
+                    <form class="form">
+                        <label for="birthday" display="block" padding-bottom="25px">What is your birth date on the 
+                            <span style="color:green" id="gregorian" class="greg" title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?
+                        </label>
+                        <div id="inputAndButton">
+                            <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
+                            <input type="submit" value="Process Birthday"/>
+                        </div>
+                    </form>
+                </div>
+                <div>        
+                    <aside id="explain">You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Hebrew calendar as well. That's often true...but not always. </aside>
+                </div>
+                <div class="ifThis">
+                    <p>Since your Gregorian birthday was on 
+                        <span id="birthdayG"></span>
+                    </p>
+                </div>
+                <div class="thenThat">
+                    <p> Your birthday on the Hebrew calendar was on 
+                        <span id="birthdayH"></span>
+                    </p>
+                </div>
+                <div class="astroG">
+                    <p id="gregorianSign">Your Astrological Sign on the Gregorian Calendar: 
+                        <span id="gregorianSpan"></span>
+                    </p>
+                </div>
+                <div class="astroH">  
+                    <p id="hebrewSign">Your Astrological Sign on the Hebrew Calendar: 
+                        <span id="hebrewSpan"></span> 
+                    </p>
+                </div>
+                <div class="Chinese"> 
+                    <p>On the Chinese Calendar, you were born in . . .  
+                        <span id="chineseYear"></span>.
+                    </p>
+                </div>
+                </div>
+<!-- keep for later
+    <aside class="stayInTouch">
         <form class="form">
-            <label for="birthday">What is your birth date on the <span style="color:green" id="gregorian" class="greg" title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?</label>
-            <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
-            <input type="submit" value="Process Birthday"/>
-
+            <label for="email">If you'd like to stay in contact with us, please enter your email: </label>
+            <input type="email" id="email" name="email"/>
+            <input type="submit"/>
         </form>
-    </div>
-    <div class="ifThis"><p>Since your Gregorian birthday was on <span id=birthdayG></span></p></div>
-    <div class="theThat">
-        <p> Your birthday on the Hebrew calendar was on <span id="birthdayH"></span></p></div>
- 
-    <div class="astroG"><p id="gregorianSign">Your Astrological Sign on the Gregorian Calendar: <span id=gregorianSpan></span></p>
-      </div>
-    <div class="astroH">  <p id="hebrewSign">Your Astrological Sign on the Hebrew Calendar: <span id="hebrewSpan"></span> </p>
-    </div>
-    <div class = Chinese> 
-        <p>On the Chinese Calendar, you were born in . . .  <span id="chineseYear"></span>.</p></div>
-
-</div>
-
-<aside class="stayInTouch">
-    <form class="form">
-        <label for="email">If you'd like to stay in contact with us, please enter your email: </label>
-        <input type="email" id="email" name="email"/>
-        <input type="submit"/>
-      </form>
-
-</aside>
-
-
-</main>    
-
-<footer font-size="smaller">
-    <div style="text-align:right;line-height:0.7;font-size: small;">
-        <hr id="footerHR">
-        <p >Author:  
-            <a href="jennifereinstein@pursuit.org">Jennifer Einstein</a></p>
-            <a href="/privacy.html" >Privacy Policy</a>
-         
-    <span><p>Powered by <a href=https://www.hebcal.com>Hebcal Shabbat Times</a></p></span>
-</div>
-    </footer>
-    </body> 
+    </aside> -->
+        </main>    
+        <footer font-size="smaller">
+            <div style="text-align:right;line-height:0.7;font-size: small;">
+                <hr id="footerHR">
+                    <p >Author:  
+                        <a href="jennifereinstein@pursuit.org">Jennifer Einstein</a>
+                    </p>
+                    <a href="/privacy.html" >Privacy Policy</a>
+                    <span>
+                        <p>Powered by 
+                            <a href="https://www.hebcal.com">Hebcal Shabbat Times</a>
+                        </p>
+                    </span>
+            </div>
+        </footer>
+    </body>
 </html>

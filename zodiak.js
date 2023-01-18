@@ -109,6 +109,7 @@ function gregorian_sign(bDay, bMonth) {
   gs.append(astro_sign); //this works
 }
 
+//label.after(birthdayGrab)
 
 //============ EVENT LISTENER HERE II ==================
 //=========== Get the Hebrew Date from Gregorian Date==========
@@ -217,6 +218,8 @@ document.querySelector("form").addEventListener("submit", (event) => {
       });
   });
 });
+
+form.querySelector("birthday.birthday")
 
 //==========Find zodiac animal of Chinese Calender======
 
