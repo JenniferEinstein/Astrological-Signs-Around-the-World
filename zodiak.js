@@ -17,9 +17,16 @@ let bMonthDay;
 let birthDate = bYear + "-" + bMonthDay;
 let birthday;
 
+//=============== Creating and Selecting Elements ============
+
+let p = document.createElement("p");
+let label = document.querySelector("label");
+let gregorian = document.querySelector("#gregorian");
+let birthdayGrab = document.querySelector("#birthday")
 let submission = document.querySelector(".form");
 
-/*========== Event Listener I ========*/
+
+/*=============== Event Listener I ===============*/
 submission.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -53,7 +60,7 @@ submission.addEventListener("submit", (e) => {
   console.log("birthday", birthday); //What is the birthday variable?
 });
 
-//==================Determine Gregorian Zodiac Sign==========
+//=============Determine Gregorian Zodiac Sign==========
 
 function gregorian_sign(bDay, bMonth) {
   let astro_sign = "";
@@ -102,15 +109,8 @@ function gregorian_sign(bDay, bMonth) {
   gs.append(astro_sign); //this works
 }
 
-//===============Creating Elements============
 
-let p = document.createElement("p");
-
-//================== Selecting Elements ===================
-
-let label = document.querySelector("label");
-
-//============ EVENT LISTENER HERE!!!!==================
+//============ EVENT LISTENER HERE II ==================
 //=========== Get the Hebrew Date from Gregorian Date==========
 
 document.querySelector("form").addEventListener("submit", (event) => {
@@ -173,7 +173,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
         }
         document.getElementById(
           "birthdayG"
-        ).innerHTML = `${hebcal.gm} ${hebcal.gd}, ${hebcal.gy},`;
+        ).innerHTML = `${hebcal.gm} ${hebcal.gd}, ${hebcal.gy}`;
 
         let chodesh = hebcal.hm;
         console.log("Hebcal then Chodesh", hebcal.hm, chodesh);
@@ -217,8 +217,6 @@ document.querySelector("form").addEventListener("submit", (event) => {
       });
   });
 });
-
-// <p id="gregorianSign">Your Astrological Sign on the Hebrew Calendar</p>
 
 //==========Find zodiac animal of Chinese Calender======
 

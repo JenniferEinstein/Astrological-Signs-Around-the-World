@@ -1,3 +1,25 @@
+<!--   
+            <form class="form">
+                <label for="birthday">What is your birth date on the <span style="color:green" id="gregorian" class="greg" title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?</label>
+                <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
+                <input type="submit" value="Process Birthday"/>
+
+            </form>
+        </section>    
+    
+    <section id="answer" name="answer" class="answer">
+
+<p>Since your Gregorian birthday was on <span id=birthdayG></span></p>
+<p> your birthday on the Hebrew calendar was <span id="birthdayH"></span></p>
+<p>On the Chinese Calendar, you were born in . . .  <span id="chineseYear"></span>.</p>
+    </section>
+    <section id="signs">
+
+<p id="gregorianSign">Your Astrological Sign on the Gregorian Calendar: </p>
+<p id="hebrewSign">Your Astrological Sign on the Hebrew Calendar: </p> -->
+
+
+
 ================Celtic============
 Celtic
 Dec 24 - Jan 20  Birch  / Stag or Deer
