@@ -1,7 +1,7 @@
 # What's My . . . Signs?
 
 Your zodiac signs around the world....
-You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Jewish calendar as well. Not necessarily. This app will explore how different calendars around the world categorize you according to your date of birth.
+You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Hebrew calendar as well. Not necessarily. This app will explore how different calendars around the world categorize you according to your date of birth.
 >
 ## Table of Contents
 >
@@ -75,13 +75,13 @@ Guideslines from Apple.
 >
 ## Credits
 >
-<li>How to Write an Awesome Readme, by Suraj Vishwakarma
-<li>[Markdown Guide](https://www.markdownguide.org)
-<li>[HebCal Converter](https://www.hebcal.com)
-<li>Visual Studio Code
-<li>[Color Contrast Checker](https://coolors.co/contrast-checker)
-<li>[Chinese Year](https://chinese-year.com)
-<li>[mdn web docs_ at](https://developer.mozilla.org)
-<li>Juan Feliz
-<li>[npm Docs](https://dpcsnpmjs.com)
+-How to Write an Awesome Readme, by Suraj Vishwakarma
+-[Markdown Guide](https://www.markdownguide.org)
+-[HebCal Converter](https://www.hebcal.com)
+-Visual Studio Code
+-[Color Contrast Checker](https://coolors.co/contrast-checker)
+-[Chinese Year](https://chinese-year.com)
+-[mdn web docs_ at](https://developer.mozilla.org)
+-Juan Feliz
+-[npm Docs](https://dpcsnpmjs.com)
 >
