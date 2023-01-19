@@ -36,34 +36,13 @@
 body {
     /* background-color: #f3c39b; */
     background-color: #89d2ff;
-    /* display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto; ;
-    grid-template-areas: 
-    "header" */  
+
 }
 
 
 /* (A)  */
 #grid2 {
     display: grid;
-    
-    /* grid-template-columns: auto auto ;  
-    grid-gap: 10px;
-/* 
-    grid-template-areas: 
-    "head head"
-    "ifThis thenThat"
-    "astroG astroH"
-     "chinese" */
-/* 
-
-
-    grid-template:
-    "head head" 50px
-    "astro Chinese ifThis" 30px
-    "astro Chinese ifThis" 40px / 1fr 1fr 1fr */
-
   }
   /* (B) 1 COL ON SMALL SCREENS */
   @media screen and (max-width:768px) {
@@ -120,7 +99,7 @@ span.greg {
 
 
 section.main {
-    background-color: lightcyan;
+    background-color: lavender;
     grid-area: main;
     padding: 10px;
     margin-left: 10px;
@@ -150,10 +129,73 @@ animation: mymove 5s;
     50% {font-size: 40px;}
 } */
 
+.pop-outin {
+    animation: 3s anim-popoutin ease 2;
+   transition-duration: 6s;
+  
+  }
+
+@keyframes anim-popoutin {
+    0% {
+      color: black;
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: purple;
+      transform: scale(2);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    70% {
+      color: blueviolet;
+      transform: scale(1);
+      opacity: .7;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+
+
+
 
 
 /* ================== GRID ==================== */
-/* from code-box.com/create-grid-javascript/ */
+
+/* this was in the body
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; ;
+    grid-template-areas: 
+    "header" 
+
+    This was in #grid2
+
+        /* grid-template-columns: auto auto ;  
+    grid-gap: 10px;
+/* 
+    grid-template-areas: 
+    "head head"
+    "ifThis thenThat"
+    "astroG astroH"
+     "chinese" */
+/* 
+
+
+    grid-template:
+    "head head" 50px
+    "astro Chinese ifThis" 30px
+    "astro Chinese ifThis" 40px / 1fr 1fr 1fr */
+
+
+    /* from code-box.com/create-grid-javascript/ */
 /* #grid2 {
     display: grid; 
     grid-template-columns: auto auto auto;
