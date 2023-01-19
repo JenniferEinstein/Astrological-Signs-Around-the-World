@@ -10,8 +10,6 @@
     padding: left 0;
 }
 
-
-
 .title {
     padding-top: 30px;
     font-optical-sizing: 36px;
@@ -33,10 +31,6 @@
     }
 }
 
-.label {
-    display:block-size ;
-    padding: bottom 12px; ;
-}
 
 
 body {
@@ -53,7 +47,8 @@ body {
 /* (A)  */
 #grid2 {
     display: grid;
-    /* grid-template-columns: auto auto ;  */
+    
+    /* grid-template-columns: auto auto ;  
     grid-gap: 10px;
 /* 
     grid-template-areas: 
@@ -61,16 +56,18 @@ body {
     "ifThis thenThat"
     "astroG astroH"
      "chinese" */
+/* 
+
 
     grid-template:
     "head head" 50px
     "astro Chinese ifThis" 30px
-    "astro Chinese ifThis" 40px / 1fr 1fr 1fr
+    "astro Chinese ifThis" 40px / 1fr 1fr 1fr */
 
   }
   /* (B) 1 COL ON SMALL SCREENS */
   @media screen and (max-width:768px) {
-    #grid { grid-template-columns: auto; }
+    #grid2 { grid-template-columns: auto; }
   }
   /* (C) OPTIONAL FOR THE CELLS */
   .head, .cell { padding: 10px; }
@@ -93,9 +90,13 @@ body {
    border: 0px
 }
 
+#explain {
+    margin-top: 4mm;
+}
 
 #inputAndButton {
-    
+    margin-top: .1in;
+    margin-inline: 15px;
 }
 
 span.greg {
@@ -125,22 +126,31 @@ section.main {
     margin-left: 10px;
 }
 
-/* Let's try animating the font. Didn't work initially. animation: mymove 5s;*/
+
 #chineseYear {    color:red;}
 #gregorianRed {    color:red;}
 #hebrewRed {    color:red;}
 
 
-@keyframes mymove {
-    50% {font-size: 40px;}
+/* ======================= OTHER ==================== */
+
+.hidden{
+    display:none
 }
+ 
 
-
-/* for reading right to left*/
-
+/* for reading right to left */
 p.rtl {
     direction: rtl
 }
+
+ /* Let's try animating the font. Didn't work initially. 
+animation: mymove 5s;
+@keyframes mymove {
+    50% {font-size: 40px;}
+} */
+
+
 
 /* ================== GRID ==================== */
 /* from code-box.com/create-grid-javascript/ */
@@ -183,12 +193,6 @@ p.rtl {
     background: #f8ffde;
   } */ 
 
-/* ======================= OTHER ==================== */
-
-.hidden{
-    display:none
-}
- 
 
 
 

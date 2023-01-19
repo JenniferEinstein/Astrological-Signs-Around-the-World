@@ -415,6 +415,7 @@ function yearOfThe(bYear) {
   }
 }
 
+//================ Thoughts and Unused Code ============
 //since the Chinese Zodiac is on a 12 year cycle, a function to iterate every 12 years should be helpful. It was not.
 
 //split the birthday into the component parts.
@@ -437,7 +438,7 @@ What am I trying to do here? I want to get all the years for each Chinese Zodiac
     const currentDiv = document.getElementById("div1");
     document.body.insertBefore(newDiv, currentDiv);
   }
-/* ===================Grid========
+/* =================== Grid ========
 let container = document.getElementById("grid");
 let cell = document.createElement("div");
 cell.innerText = "TEXT1";

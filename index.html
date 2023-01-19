@@ -16,7 +16,7 @@
             <div id="grid2">
                 <div class="head">
                     <form class="form">
-                        <label for="birthday" display="block" padding-bottom="25px">What is your birth date on the 
+                        <label for="birthday">What is your birth date on the 
                             <span style="color:green" id="gregorian" class="greg" title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?
                         </label>
                         <div id="inputAndButton">
@@ -29,8 +29,13 @@
                     <aside id="explain">You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Hebrew calendar as well. That's often true...but not always. </aside>
                 </div>
                 <div class="ifThis">
-                    <p>Since your Gregorian birthday was on 
+                    <p>You said your birthday was on  
                         <span id="birthdayG"></span>
+                    </p>
+                </div>
+                <div class="astroG">
+                    <p id="gregorianSign">You likely already know that your astrological sign is 
+                        <span id="gregorianSpan"></span>
                     </p>
                 </div>
                 <div class="thenThat">
@@ -38,13 +43,9 @@
                         <span id="birthdayH"></span>
                     </p>
                 </div>
-                <div class="astroG">
-                    <p id="gregorianSign">Your Astrological Sign on the Gregorian Calendar: 
-                        <span id="gregorianSpan"></span>
-                    </p>
-                </div>
+
                 <div class="astroH">  
-                    <p id="hebrewSign">Your Astrological Sign on the Hebrew Calendar: 
+                    <p id="hebrewSign">Your astrological sign on the Hebrew Calendar: 
                         <span id="hebrewSpan"></span> 
                     </p>
                 </div>
@@ -63,7 +64,7 @@
         </form>
     </aside> -->
         </main>    
-        <footer font-size="smaller">
+        <footer>
             <div style="text-align:right;line-height:0.7;font-size: small;">
                 <hr id="footerHR">
                     <p >Author:  
