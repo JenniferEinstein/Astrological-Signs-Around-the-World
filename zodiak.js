@@ -15,7 +15,7 @@
 let bYear;
 let bMonthDay;
 let birthDate = bYear + "-" + bMonthDay;
-let birthday;
+
 
 //=============== Creating and Selecting Elements ============
 
@@ -219,7 +219,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   });
 });
 
-form.querySelector("birthday.birthday")
+console.log("bday.bday is", form.querySelector("birthday.birthday"))
 
 //==========Find zodiac animal of Chinese Calender======
 
