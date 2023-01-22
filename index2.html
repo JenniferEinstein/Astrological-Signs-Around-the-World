@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Whats My Signs?</title>
+            <link rel="stylesheet" href="./style2.css"/>
+            <script defer="defer" src="./zodiak.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Your Astrological Signs Around the World</h1>
+    </header>
+    <main class="main">
+        <div class="parent" id="grid2">
+            <div class="div1">       
+                <aside id="explain">You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Hebrew calendar as well. That's often true...but not always. </aside></div>
+            <div class="div3" class="head"> 
+                <form class="form grid">
+                    <label for="birthday">What is your birth date on the 
+                        <span style="color: #00c" id="gregorian" class="greg" class="hovertext" 
+                        data-hover="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days." 
+                        title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?
+                    </label>
+                <div id="inputAndButton">
+                    <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
+                    <input type="submit" value="Process Birthday"/> 
+                </div>
+            </form></div>
+            <div class="div4" class="ifThis">                
+                <p>You said your birthday was on  
+                <span id="birthdayG"></span>
+            </p></div>
+            <div class="div5" class="astroG">                
+                <p id="gregorianSign">You likely already know that your astrological sign is 
+                <span id="gregorianSpan"></span></p></div>
+            <div class="div6" class="thenThat">
+                <p> Your birthday on the Hebrew calendar was on 
+                    <span id="birthdayH"></span>
+                </p>
+            </div>
+            <div class=div7 class="astroH">  
+                <p id="hebrewSign">Your astrological sign on the Hebrew Calendar: 
+                    <span id="hebrewSpan"></span> 
+                </p>
+            </div>
+            <div class=div8 class="Chinese"> 
+                <p>On the Chinese Calendar, you were born in . . .  
+                    <span id="chineseYear"></span>.
+                </p>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+<div></div>
+<footer></footer>
+</body>
+</html>

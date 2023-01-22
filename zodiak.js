@@ -17,7 +17,7 @@ let bMonthDay;
 let birthDate = bYear + "-" + bMonthDay;
 
 
-//=============== Creating and Selecting Elements ============
+//======== Creating and Selecting Elements =========
 
 let p = document.createElement("p");
 let label = document.querySelector("label");
@@ -26,11 +26,11 @@ let birthdayGrab = document.querySelector("#birthday")
 let submission = document.querySelector(".form");
 
 
-/*=============== Event Listener I ===============*/
+/*=============== Event Listener I ========*/
 submission.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  birthday = document.getElementById("birthday").value;
+  let birthday = document.getElementById("birthday").value;
   bYear = birthday.slice(0, 4);
   bMonth = birthday.slice(5, 7);
   console.log("bMonth is ", bMonth);
@@ -40,11 +40,11 @@ submission.addEventListener("submit", (e) => {
   birthDate = bYear + "-" + bMonthDay;
   console.log("birthDate is ", birthDate);
 
-  let birthdayG;
+  let birthdayG="";  //starting this with an empty value
 
   try {
     birthdayG = bMonth + " " + bDay + ", " + bYear + ",";
-    console.log("birthday G is ", birthdayG);
+    console.log("birthdayG is ", birthdayG);
     document.getElementById("birthdayG").innerHTML(birthdayG);
   } catch (error) {
     ("There has been an error before line 50");
@@ -53,7 +53,7 @@ submission.addEventListener("submit", (e) => {
   yearOfThe(bYear); //calls function for Gregorian Zodiak
   gregorian_sign(bDay, bMonth); //calls function for Zodiak
 
-  console.log(bYear); //what will the year be defined as?
+  console.log("bYear is ", bYear); //what will the year be defined as?
   console.log("month", bMonth); //what will the month be defined as?
   console.log("day", bDay); //what will the day be defined as?
   console.log("birthDate", birthDate); //What is the birthDate variable?
@@ -105,14 +105,15 @@ function gregorian_sign(bDay, bMonth) {
   }
 
   console.log("astro sign is", astro_sign); //this works
+  
   const gs = document.getElementById("gregorianSign");
-  gs.append(astro_sign); //this works
+  gs.append(astro_sign); //this works. 
 }
 
 //label.after(birthdayGrab)
 
-//============ EVENT LISTENER HERE II ==================
-//=========== Get the Hebrew Date from Gregorian Date==========
+//============ EVENT LISTENER HERE II ==========
+//===== Get the Hebrew Date from Gregorian Date======
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -414,6 +415,8 @@ function yearOfThe(bYear) {
     document.getElementById("chineseYear").innerHTML = "the Year of the Pig";
   }
 }
+form.birthday.reset() //makes sure to clear the form so it is ready to be used again
+
 
 //================ Thoughts and Unused Code ============
 //since the Chinese Zodiac is on a 12 year cycle, a function to iterate every 12 years should be helpful. It was not.
