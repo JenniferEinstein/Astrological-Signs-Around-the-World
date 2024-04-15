@@ -13,42 +13,59 @@
         <h1 class="title">Your Astrological Signs Around the World</h1>
     </header>
     <main class="main">
-        <div class="parent" id="grid2">
+        <div class="parent" class="grid2" >
             <div class="div1">       
-                <aside id="explain">You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Hebrew calendar as well. That's often true...but not always. </aside></div>
+                <aside id="explain">You might think that if you are a water bearer on the Gregorian calendar, you would be a water bearer on the Hebrew calendar as well. That's often true...but not always.       
+                </aside>
+            </div>
             <div class="div3" class="head"> 
-                <form class="form grid">
+                <form class="form grid" name="birthdayForm"  >
                     <label for="birthday">What is your birth date on the 
                         <span style="color: #00c" id="gregorian" class="greg" class="hovertext" 
                         data-hover="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days." 
                         title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?
                     </label>
                 <div id="inputAndButton">
-                    <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
+                    <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy" onsubmit="return validateForm()" method="post" action=""/>
                     <input type="submit" value="Process Birthday"/> 
+                    <p id="errors"></p>  
+                    <!-- I cannot get this to return validateForm -->
                 </div>
-            </form></div>
-            <div class="div4" class="ifThis">                
+            </form>
+        </div>
+            <div class="div4" class="ifThis" class="single-line">                
                 <p>You said your birthday was on  
                 <span id="birthdayG"></span>
-            </p></div>
-            <div class="div5" class="astroG">                
+            </p>
+        </div>
+            <div class="div5 astroG" class="single-line">                
                 <p id="gregorianSign">You likely already know that your astrological sign is 
-                <span id="gregorianSpan"></span></p></div>
-            <div class="div6" class="thenThat">
+                <span id="gregorianSpan"></span>
+                </p>
+            </div>  
+
+            <div class="div6" class="thenThat" class="single-line">
                 <p> Your birthday on the Hebrew calendar was on 
                     <span id="birthdayH"></span>
                 </p>
             </div>
-            <div class=div7 class="astroH">  
+            <div class=div7 class="astroH" class="single-line">  
                 <p id="hebrewSign">Your astrological sign on the Hebrew Calendar: 
                     <span id="hebrewSpan"></span> 
                 </p>
             </div>
-            <div class=div8 class="Chinese"> 
+            <div class=div8 class="Chinese" class="single-line"> 
                 <p>On the Chinese Calendar, you were born in . . .  
                     <span id="chineseYear"></span>.
                 </p>
+                <p id="demo1"></p>
+                <p id="demo2"></p>
+                <p id="demo3"></p>
+                <p id="demo4"></p>
+                <p id="demo5"></p>
+
+
+
             </div>
 
 
@@ -62,7 +79,20 @@
 
 
 
-<div></div>
-<footer></footer>
+</main>
+        <footer>
+            <div style="text-align:right;line-height:0.7;font-size: small;">
+                <hr id="footerHR">
+                    <p >Author:  
+                        <a href= "mailto: jennifereinstein@pursuit.org">Jennifer Einstein</a>
+                    </p>
+                    <a href="/privacy.html" >Privacy Policy</a>
+                    <span>
+                        <p>Powered by 
+                            <a href="https://www.hebcal.com">Hebcal Shabbat Times</a>
+                        </p>
+                    </span>
+            </div>
+        </footer>
 </body>
 </html>

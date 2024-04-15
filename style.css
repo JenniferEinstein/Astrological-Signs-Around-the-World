@@ -1,9 +1,8 @@
 .header{
     background-color: dodgerblue;
     color: snow; 
-    /* background-color: #b8543a;
-    color: black; */
     text-align: center;
+    letter-spacing: 1px;
     margin: -20px;
     grid-area: header;
     padding-bottom: 5%;
@@ -33,9 +32,20 @@
 
 
 body {
+  display: ;
     /* background-color: #f3c39b; */
     background-color: #89d2ff;
+  max-width: 700px;
+ 
+}
 
+
+.div5, 
+.div6,
+.div7,
+.div8 {
+  margin-left: 15px;
+  height:35px;  
 }
 
 
@@ -58,11 +68,13 @@ body {
   .ifThis{
     padding:10px;
     margin:auto
+    
   }
 
 .astro {
     border: 1px solid;
     background: #ff9966;
+    
 }
 .Chinese {
    border: 0px
@@ -70,6 +82,9 @@ body {
 
 #explain {
     margin-top: 4mm;
+    margin-left: 15px;
+    margin-right: 1in;
+
 }
 
 #inputAndButton {
@@ -77,7 +92,9 @@ body {
     margin-inline: 15px;
 }
 
-span.greg {
+
+span.greg,
+#gregorian {
     cursor:help
 }
 
@@ -106,8 +123,8 @@ section.main {
 
 
 #chineseYear {    color:red;}
-#gregorianRed {    color:red;}
-#hebrewRed {    color:red;}
+#gregorianSpan {    color:red;}
+#hebrewSpan {    color:red;}
 
 
 /* ======================= OTHER ==================== */
@@ -162,12 +179,35 @@ animation: mymove 5s;
   }
   
 
+/* ================== might need later ==================== 
+#birthday{
+ line-height: 110%;
+ align-items: center;
+}
+.hovertext:before {
+    content:attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: navy;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
 
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+}
 
-
+#birthday:hover {
+    text-shadow: #ff4da6;
+}
+*/
 
 /* ================== GRID ==================== */
-
 /* this was in the body
     /* display: grid;
     grid-template-columns: auto;

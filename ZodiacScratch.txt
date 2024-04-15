@@ -1,3 +1,146 @@
+/* ============ For Later Functionality with Cards ************
+
+const card = document.createElement("article");
+card.setAttribute("class", "card");
+const innerCard = document.createElement ("div");
+innerCard.setAttribute("class", "card-inner");
+const front = document.createElement("div");
+front.setAttribute("class", "card-front");
+const back = document.createElement("div");
+back.setAttribute("class", "card-back");
+const backImage = document.createElement("img");
+const image = document.createElement("img");
+image.setAttribute("class", "image");
+image.setAttribute("src", get source for image);
+const name = document.createElement("div");
+name.setAttribute("class", "card-title");
+back.append(backImage);
+front.append(image);
+innerCard.append(front,back);
+card.append(innerCard);
+document.getElementById("something here").append(card)
+
+
+
+
+To get attributes
+
+
+const nodeMap = document.getElementById("gregorian").attributes;
+let text = "";
+for (let i=0; i< nodeMap.length; i++){
+  text += nodeMap[i].name + " = " + nodeMap[i].value + "<BR>";
+}
+document.getElementById("demo1").innerHTML = text
+demo1.after(chineseYear)
+
+
+
+
+/* =================== Grid ========
+let container = document.getElementById("grid");
+let cell = document.createElement("div");
+cell.innerText = "TEXT1";
+container.appendChild(cell);
+cell.innerText = "TEXT2";
+container.appendChild(cell);
+
+
+    // console.log(`https://www.hebcal.com/converter?cfg=json&date=${document.querySelector("#birthday").value}&g2h=1&strict=1`,"Hello from the other side birthday");
+
+
+*/
+
+/* ============== date formatting didn't use ==========
+/*
+   console.log(birthday.getFullYear) //is not a Function at HTMLFormElement.<Anonymous.
+   y=document.getElementById("birthday").value.getFullYear();//is not a Function at HTMLFormElement.<Anonymous.
+   console.log(y)
+*/
+
+// const x = new Date()  //this gives the current date
+// document.getElementById("birthday").innerHTML=x.getFullYear();
+// console.log("x",x)
+
+// let dateMonth = 1+(birthday.getMonth()); console.log("first instance of month",dateMonth)
+// p=document.createElement(p).value("dateMonth");
+// if(dateMonth<10){dateMonth = `0${dateMonth}`};
+// console.log("month", dateMonth);
+
+// let dateDay = birthday.getDate();
+// if(dateDay<10){dateDay = `0${dateDay}`};
+// console.log("day", dateDay);
+
+// const dateYear = birthday.getYear(); console.log("year", dateYear);
+// const dateFormatted = dateYear+"-"+dateMonth+"-"+dateDay; console.log("date",dateFormatted)
+
+===================
+const dte = new Date();
+const simpleDateFormatter  = new simpleDateFormatter(yyyy-MM-dd);
+simpleDateFormatter.format(dte)
+try {
+    date = sdfSource.parse(dateTime);
+} catch (parseException e) {
+    e.printStackTrace();
+}
+return sdfDestination.format(date)
+===========================
+
+
+
+
+/*  ===========Mouseover didn't use================
+// const gregorian = document.getElementById("gregorian")
+// gregorian.addEventListener("mouseover",(e) => {
+//     e.preventDefault();
+//     alert("mouse over text")
+//     e.target.innerText = "test this"
+// })
+
+// function mouseover(){
+//     document.getElementById("gregorian").style.color = "red"
+// }
+
+
+class="hovertext01" data-hover="This is the data hover. See if i like it better." 
+
+This ended up being unweildy. In addition, it ran off the page.
+
+   <form class="form">
+                <label for="birthday">What is your birth date on the <span style="color:green" id="gregorian" display="block" class="hovertext01" data-hover="The Gregorian calendar...instead of 365.25.">Gregorian Calendar?</span></label>
+*/
+=========================
+
+
+====footer====
+this didn't really work. I could only use the br once and it was clumsy anyway.
+const email = "jennifereinstein@pursuit.org"
+const privacyPolicy = "/privacy.html"
+const br = document.createElement("br")
+
+footerHR.append("Author: Jennifer Einstein")
+footerHR.append(br)
+footerHR.append(`email`)
+footerHR.append(privacyPolicy)
+======================
+
+
+/*
+What am I trying to do here? I want to get all the years for each Chinese Zodiac Animal. 
+
+//=================== Gregorian Calendar ===============
+//explain Gregorian Calendar. Put an I next to Gregorian and do a mouseover listener? link to somewhere for more information? I tried many ways on my own. It turns out that it was a capitalization error possibly. I found that I could use the title attribute to do this. But then I couldn't use CSS or a link.
+
+
+
+*/
+===================================
+
+
+
+
+
+
 Getting rid of this did nothing, so I got rid of it because the name was to vague:  //let birthday;
 
 <!--   
