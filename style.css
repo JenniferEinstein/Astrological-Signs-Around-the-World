@@ -1,3 +1,5 @@
+
+
 .header{
     background-color: dodgerblue;
     color: snow; 
@@ -6,7 +8,7 @@
     margin: -20px;
     grid-area: header;
     padding-bottom: 5%;
-    padding: left 0;
+    padding-left: 0;
 }
 
 .title {
@@ -37,6 +39,12 @@ body {
     background-color: #89d2ff;
   max-width: 700px;
  
+}
+
+
+/* Yes, I should not have used head as a class name */
+.head{
+ background-color: #e60073;
 }
 
 
@@ -72,7 +80,7 @@ body {
   }
 
 .astro {
-    border: 1px solid;
+    border: 1px solid snow;
     background: #ff9966;
     
 }

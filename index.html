@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Whats My Signs?</title>
             <link rel="stylesheet" href="./style.css"/>
-            <script defer="defer" src="./zodiak.js"></script>
+            <script defer src="./zodiak.js"></script>
 </head>
     <body>
         <header class="header">
@@ -17,7 +17,8 @@
                 <div class="head">
                     <form class="form grid">
                         <label for="birthday">What is your birth date on the 
-                            <span style="color:green" id="gregorian" class="greg" title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?
+                            <span style="color:green" id="gregorian" class="greg"
+                            title="The Gregorian calendar is a solar calendar with 12 months of 28 to 31 days each and is used in most parts of the world today. Introduced in October 1582 by Pope Gregory XIII as a replacement for the Julian calendar, the principal change was to space leap years differently so as to make the average calendar year 365.2425 days long instead of 365.25 days.">Gregorian Calendar</span>?
                         </label>
                         <div id="inputAndButton">
                             <input type="date" id="birthday" name="birthday" minlength="10" maxlength="10" value="mm/dd/yyyy"/>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="div6 thenThat">
                     <p> Your birthday on the Hebrew calendar was on 
-                        <span id="birthdayH" style="decoration:underline"></span>
+                        <span id="birthdayH" style="text-decoration:underline"></span>
                     </p>
                 </div>
 
