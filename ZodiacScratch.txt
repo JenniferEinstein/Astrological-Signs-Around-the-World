@@ -239,6 +239,24 @@ if (x == 2 || x == -10)  {value = "Boar";}
 }
 </script>
 
+
+// SOUNDS FOR CHINESE ZODIAC
+tiger: https://en.wikipedia.org/wiki/File:439280_schots_angry-tiger.wav
+rooster: https://en.wikipedia.org/wiki/File:Medium_rooster_crowing.ogg
+dog: https://en.wikipedia.org/wiki/File:Barking_of_a_dog.ogg
+goat:  https://en.wikipedia.org/wiki/File:Herd_of_goats_bleating.ogg
+horse: https://en.wikipedia.org/wiki/File:Wiehern.ogg
+monkey: https://en.wikipedia.org/wiki/File:Mantled_Howler_Monkey_(Alouatta_palliata)_(W_ALOUATTA_PALLIATA_R1_C2).ogg
+pig: https://en.wikipedia.org/wiki/File:Mudchute_pig_1.ogg
+rat: https://pixabay.com/sound-effects/search/rat/
+Ox: https://pixabay.com/sound-effects/cows-mooing-mono-4824-100996/
+Rabbit: https://en.wikipedia.org/wiki/File:Laut%C3%A4u%C3%9Ferung_Kaninchen.flac
+Dragon: https://pixabay.com/sound-effects/dragon-roar-38093/
+Snake: https://pixabay.com/sound-effects/snake-hiss-95241/
+
+// 
+
+
 <center><b>Calculate your Western and Chinese Astrological Signs</b></center>
 <form name="zodiac">
 <center>
