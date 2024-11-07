@@ -213,27 +213,27 @@ document.querySelector("form").addEventListener("submit", (event) => {
           let hAstro_sign = "";
           if (chodesh == "Nisan") {
             hAstro_sign = "Aries";
-          } else if ((chodesh = "Iyar")) {
+          } else if ((chodesh == "Iyar")) {
             hAstro_sign = "Taurus";
-          } else if ((chodesh = "Sivan")) {
+          } else if ((chodesh == "Sivan")) {
             hAstro_sign = "Gemini";
-          } else if ((chodesh = "Tammuz")) {
+          } else if ((chodesh == "Tammuz")) {
             hAstro_sign = "Cancer";
-          } else if ((chodesh = "Av")) {
+          } else if ((chodesh == "Av")) {
             hAstro_sign = "Leo";
-          } else if ((chodesh = "Elul")) {
+          } else if ((chodesh == "Elul")) {
             hAstro_sign = "Virgo";
-          } else if ((chodesh = "Tishrei")) {
+          } else if ((chodesh == "Tishrei")) {
             hAstro_sign = "Libra";
-          } else if ((chodesh = "Chesvan")) {
+          } else if ((chodesh == "Chesvan")) {
             hAstro_sign = "Scorpio";
-          } else if ((chodesh = "Kislev")) {
+          } else if ((chodesh == "Kislev")) {
             hAstro_sign = "Sagittarius";
-          } else if ((chodesh = "Tevet")) {
+          } else if ((chodesh == "Tevet")) {
             hAstro_sign = "Capricorn";
-          } else if ((chodesh = "Shevat")) {
+          } else if ((chodesh == "Shevat")) {
             hAstro_sign = "Aquarius";
-          } else if ((chodesh = "Adar")) {
+          } else if ((chodesh == "Adar")) {
             hAstro_sign = "Pisces";
           }
 

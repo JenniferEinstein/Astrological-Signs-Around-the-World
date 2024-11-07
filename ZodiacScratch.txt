@@ -245,14 +245,37 @@ tiger: https://en.wikipedia.org/wiki/File:439280_schots_angry-tiger.wav
 rooster: https://en.wikipedia.org/wiki/File:Medium_rooster_crowing.ogg
 dog: https://en.wikipedia.org/wiki/File:Barking_of_a_dog.ogg
 goat:  https://en.wikipedia.org/wiki/File:Herd_of_goats_bleating.ogg
-horse: https://en.wikipedia.org/wiki/File:Wiehern.ogg
+horse: Sound Effect by <a href="https://pixabay.com/users/tanweraman-29554143/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=247600">Aman Kumar</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=247600">Pixabay</a>
 monkey: https://en.wikipedia.org/wiki/File:Mantled_Howler_Monkey_(Alouatta_palliata)_(W_ALOUATTA_PALLIATA_R1_C2).ogg
 pig: https://en.wikipedia.org/wiki/File:Mudchute_pig_1.ogg
 rat: https://pixabay.com/sound-effects/search/rat/
+  https://freesound.org/people/MordiAudio/sounds/574107/
 Ox: https://pixabay.com/sound-effects/cows-mooing-mono-4824-100996/
 Rabbit: https://en.wikipedia.org/wiki/File:Laut%C3%A4u%C3%9Ferung_Kaninchen.flac
 Dragon: https://pixabay.com/sound-effects/dragon-roar-38093/
 Snake: https://pixabay.com/sound-effects/snake-hiss-95241/
+
+MONKEY:  
+  Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=30632">Pixabay</a>
+HORSE: 
+  Sound Effect by <a href="https://pixabay.com/users/tanweraman-29554143/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=247600">Aman Kumar</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=247600">Pixabay</a>
+ROOSTER:
+  Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105568">Pixabay</a>
+DRAGON:
+  Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=38093">Pixabay</a>
+SNAKES:
+  Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=95241">Pixabay</a>
+OX/COWS:
+  Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=100996">Pixabay</a>
+DOG:
+
+PIG: 
+  Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=40664">Pixabay</a>
+
+GOATS:
+  Sound Effect by <a href="https://pixabay.com/users/all-rounder-40160506/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=259473">Rahul</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=259473">Pixabay</a>
+
+RABBIT: Sounds are scary
 
 // 
 
