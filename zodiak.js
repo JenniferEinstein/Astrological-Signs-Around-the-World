@@ -60,29 +60,24 @@ submission.addEventListener("submit", (e) => {
   let birthday = document.getElementById("birthday").value;
   bYear = birthday.slice(0, 4);
   bMonth = birthday.slice(5, 7);
-  console.log("bMonth is ", bMonth);
   bDay = birthday.slice(8, 10);
   bMonthDay = birthday.slice(5, 10);
-  console.log("bMonthDay is ", bMonthDay);
   birthDate = bYear + "-" + bMonthDay;
-  console.log("birthDate is ", birthDate);
+
 
   let birthdayG="";  //starting this with an empty value
 
   try {
     birthdayG = bMonth + " " + bDay + ", " + bYear + ",";
-    console.log("birthdayG is ", birthdayG);
     document.getElementById("birthdayG").innerHTML(birthdayG);
   } catch (error) {
     ("There has been an error before line 50");
   }
 
-  yearOfThe(bYear); //calls function for Chinese Zodiak
+  getChineseZodiac(bYear); //calls function for Chinese Zodiak
   gregorian_sign(bDay, bMonth); //calls function for Zodiak
 
-  console.log("bYear is ", bYear); //what will the year be defined as?
-  console.log("month", bMonth); //what will the month be defined as?
-  console.log("day", bDay); //what will the day be defined as?
+
   console.log("birthDate", birthDate); //What is the birthDate variable?
   console.log("birthday", birthday); //What is the birthday variable?
 });
@@ -154,108 +149,52 @@ document.querySelector("form").addEventListener("submit", (event) => {
   fetch(
     `https://www.hebcal.com/converter?cfg=json&date=${birthDate}&g2h=1&strict=1`
   ).then((response) => {
-    // Take the result and do something with it.
-    console.log("response", response);
-    console.log("Fetch was successful!");
-    const answer = response
-      .json() //returns result, translated by JSON
-      .then((hebcal) => {
-        console.log(hebcal);
-        document.getElementById(
-          "birthdayH"
-        ).innerHTML = `${hebcal.hm} ${hebcal.hd}, ${hebcal.hy}.`;
-        if (hebcal.gm == 1) {
-          hebcal.gm = "January";
-        }
-        if (hebcal.gm == 2) {
-          hebcal.gm = "February";
-        }
-        if (hebcal.gm == 3) {
-          hebcal.gm = "March";
-        }
-        if (hebcal.gm == 4) {
-          hebcal.gm = "April";
-        }
-        if (hebcal.gm == 5) {
-          hebcal.gm = "May";
-        }
-        if (hebcal.gm == 6) {
-          hebcal.gm = "June";
-        }
-        if (hebcal.gm == 7) {
-          hebcal.gm = "July";
-        }
-        if (hebcal.gm == 8) {
-          hebcal.gm = "August";
-        }
-        if (hebcal.gm == 9) {
-          hebcal.gm = "September";
-        }
-        if (hebcal.gm == 10) {
-          hebcal.gm = "October";
-        }
-        if (hebcal.gm == 11) {
-          hebcal.gm = "November";
-        }
-        if (hebcal.gm == 12) {
-          hebcal.gm = "December";
-        }
-        document.getElementById(
-          "birthdayG"
-        ).innerHTML = `${hebcal.gm} ${hebcal.gd}, ${hebcal.gy}`;
+    response.json().then((hebcal) => {
+      console.log("hebcal response", hebcal);
 
-        let chodesh = hebcal.hm;  
-        console.log("Hebcal then Chodesh", hebcal.hm, chodesh);
-
-        function hebrew_sign(chodesh) {
-          //making and calling function for Hebrew Zodiak
-
-          let hAstro_sign = "";
-          if (chodesh == "Nisan") {
-            hAstro_sign = "Aries";
-          } else if ((chodesh == "Iyar")) {
-            hAstro_sign = "Taurus";
-          } else if ((chodesh == "Sivan")) {
-            hAstro_sign = "Gemini";
-          } else if ((chodesh == "Tammuz")) {
-            hAstro_sign = "Cancer";
-          } else if ((chodesh == "Av")) {
-            hAstro_sign = "Leo";
-          } else if ((chodesh == "Elul")) {
-            hAstro_sign = "Virgo";
-          } else if ((chodesh == "Tishrei")) {
-            hAstro_sign = "Libra";
-          } else if ((chodesh == "Chesvan")) {
-            hAstro_sign = "Scorpio";
-          } else if ((chodesh == "Kislev")) {
-            hAstro_sign = "Sagittarius";
-          } else if ((chodesh == "Tevet")) {
-            hAstro_sign = "Capricorn";
-          } else if ((chodesh == "Shevat")) {
-            hAstro_sign = "Aquarius";
-          } else if ((chodesh == "Adar")) {
-            hAstro_sign = "Pisces";
-          }
-
-          document.getElementById("hebrewSpan").innerHTML = hAstro_sign;
+      //Display Hebrew Date
+      document.getElementById(
+        "birthdayH"
+      ).innerHTML = `${hebcal.hm} ${hebcal.hd}, ${hebcal.hy}.`;
 
 
+      // Map Gregorian month numbers to names
+      const gregorianMonths = [
+        "", "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
 
+      // Display Gregorian Date
+      const gregorianMonthName = gregorianMonths[hebcal.gm];
+      document.getElementById(
+        "birthdayG"
+      ).innerHTML = `${gregorianMonthName} ${hebcal.gd}, ${hebcal.gy}.`;
 
-
-//  hs.classList.add("pop-outin") <--this works, but it affects the entire line and not just the sign
-          //   if(astro_sign === hAstro_sign){
-          //     "is exactly the same!" }   this didn't work. Scope issue
-
-          
-
-
-
-        }
-        hebrew_sign(chodesh);
-      });
-  });
+      // Map Hebrew months to zodiac signs
+      const hebrewZodiacSigns = {
+        "Nisan": "Aries",
+        "Iyyar": "Taurus",
+        "Sivan": "Gemini",
+        "Tammuz": "Cancer",
+        "Av": "Leo",
+        "Elul": "Virgo",
+        "Tishrei": "Libra",
+        "Chesvan": "Scorpio",
+        "Kislev": "Sagittarius",
+        "Tevet": "Capricorn",
+        "Shevat": "Aquarius",
+        "Adar": "Pisces",
+        "Adar II": "Pisces"
+      };
+      
+      
+      // Determine and display Hebrew zodiac sign
+      const hAstroSign = hebrewZodiacSigns[hebcal.hm];
+      document.getElementById("hebrewSpan").innerHTML = hAstroSign;
+    }).catch(error => console.error("Error parsing JSON response:", error));
+  }).catch(error => console.error("Fetch error:", error));
 });
+
 
 
 

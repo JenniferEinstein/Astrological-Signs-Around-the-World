@@ -1,5 +1,11 @@
+/* Comparing style.css to style2.css: 
+  Things are in a different order
+  In other, it is
+  #grid2, (B), (C)
+  And there is a bunch of formGrid stuff. And .parent
+  */
 
-
+/* header is mostly the same in style2.css */
 .header{
     background-color: dodgerblue;
     color: snow; 
