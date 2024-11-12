@@ -259,62 +259,26 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
 
 
-//==========Find zodiac animal of Chinese Calender======
+//==========Find zodiac animal of Chinese Calendar======
+// this function with an array replaces a long if/else statement
 
-function yearOfThe(bYear) {
-  bYear = parseInt(bYear, 10);
-  console.log("bYear is now a ", typeof bYear);
-  if (
-    bYear % 12 == 4
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Rat";
-  } else if (
-    bYear % 12 == 5
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Ox";
-  } else if (
-    bYear % 12 == 6
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Tiger";
-  } else if (
-    bYear % 12 == 7
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Rabbit";
-  } else if (
-    bYear % 12 == 8
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Dragon";
-  } else if (
-    bYear % 12 == 9
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Snake";
-  } else if (
-    bYear % 12 == 10
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Horse";
-  } else if (
-    bYear % 12 == 11
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Goat";
-  } else if (
-    bYear % 12 == 0
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Monkey";
-  } else if (
-    bYear % 12 == 1
-  ) {
-    document.getElementById("chineseYear").innerHTML =
-      "the Year of the Rooster";
-  } else if (
-    bYear % 12 == 2
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Dog";
-  } else if (
-    bYear % 12 == 3
-  ) {
-    document.getElementById("chineseYear").innerHTML = "the Year of the Pig";
-  }
+function getChineseZodiac(bYear) {
+  bYear = parseInt(bYear, 10); // Ensure bYear is an integer
+  console.log("bYear is now a", typeof bYear);
+
+  const zodiacAnimals = [
+    "Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox",
+    "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat"
+  ];
+
+  // Get the zodiac animal based on the remainder
+  const animal = zodiacAnimals[bYear % 12];
+
+  // Update the DOM element with the result
+  document.getElementById("chineseYear").innerHTML = `the Year of the ${animal}`;
 }
+
+
 
 
 
