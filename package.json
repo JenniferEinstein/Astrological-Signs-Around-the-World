@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JenniferEinstein/WhatsMySigns/issues"
   },
-  "homepage": "https://github.com/JenniferEinstein/WhatsMySigns#readme"
+  "homepage": "https://github.com/JenniferEinstein/WhatsMySigns#readme",
+  "dependencies": {
+    "date-chinese": "^2.1.4"
+  }
 }
