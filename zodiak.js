@@ -69,7 +69,7 @@ submission.addEventListener("submit", (e) => {
 
   try {
     birthdayG = bMonth + " " + bDay + ", " + bYear + ",";
-    document.getElementById("birthdayG").innerHTML(birthdayG);
+    document.getElementById("birthdayG").innerHTML = birthdayG;
   } catch (error) {
     ("There has been an error before line 50");
   }
@@ -280,8 +280,14 @@ submission.addEventListener("submit", (e) => {
 
 
 function clearZodiacSigns(){
-  document.getElementById("gregSignP").innerHTML = "";
-  document.getElementById("hebSignP").innerHTML = "";
+  document.getElementById("gregorianSign").innerHTML = "";
+  document.getElementById("gregorianSpan").innerHTML = "";
+  document.getElementById("hebrewSign").innerHTML = "";
+  document.getElementById("hebrewSpan").innerHTML = "";
+  document.getElementById("chineseSign").innerHTML = "";
+  document.getElementById("chineseYear").innerHTML = "";
+  document.getElementById("celticSign").innerHTML = "";
+  document.getElementById("celticSpan").innerHTML = "";
 }
 //note: this won't work outside of a function because an error says that there is an uncaught typeError. Cannot set properties of null (inner.HTML)
 //but the same thing happens when I call the function inside of event listener one. Worse, everything becones undefined except the Hebrew astrological sign. 
