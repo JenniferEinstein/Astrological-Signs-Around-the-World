@@ -218,8 +218,64 @@ function getChineseZodiac(bYear) {
 }
 
 
+// ======    Find the Celtic Tree Sign ======
+// Map each Celtic tree zodiac sign to its date range
+const celticTreeZodiac = [
+  { sign: "Birch", start: "12-24", end: "01-20" },
+  { sign: "Rowan", start: "01-21", end: "02-17" },
+  { sign: "Ash", start: "02-18", end: "03-17" },
+  { sign: "Alder", start: "03-18", end: "04-14" },
+  { sign: "Willow", start: "04-15", end: "05-12" },
+  { sign: "Hawthorn", start: "05-13", end: "06-09" },
+  { sign: "Oak", start: "06-10", end: "07-07" },
+  { sign: "Holly", start: "07-08", end: "08-04" },
+  { sign: "Hazel", start: "08-05", end: "09-01" },
+  { sign: "Vine", start: "09-02", end: "09-29" },
+  { sign: "Ivy", start: "09-30", end: "10-27" },
+  { sign: "Reed", start: "10-28", end: "11-24" },
+  { sign: "Elder", start: "11-25", end: "12-23" }
+];
 
+// Helper function to check if a date is within a range
+function isDateInRange(monthDay, start, end) {
+  if (start > end) { // range wraps around the year end
+    return monthDay >= start || monthDay <= end;
+  }
+  return monthDay >= start && monthDay <= end;
+}
 
+// Function to determine Celtic tree zodiac sign
+function getCelticTreeZodiac(bMonthDay) {
+  for (let i = 0; i < celticTreeZodiac.length; i++) {
+    const { sign, start, end } = celticTreeZodiac[i];
+    if (isDateInRange(bMonthDay, start, end)) {
+      return sign;
+    }
+  }
+  return "Unknown";
+}
+
+// Function to determine the correct article for the Celtic tree sign
+function getArticle(sign) {
+  const vowels = ["A", "E", "I", "O", "U"];
+  return vowels.includes(sign.charAt(0).toUpperCase()) ? "an" : "a";
+}
+
+// ==== celtic event listener =====
+submission.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let birthday = document.getElementById("birthday").value;
+  bYear = birthday.slice(0, 4);
+  bMonthDay = birthday.slice(5, 10); // Format as "MM-DD"
+
+  // Calculate Celtic tree zodiac and update the DOM
+  const celticSign = getCelticTreeZodiac(bMonthDay);
+  const article = getArticle(celticSign);
+
+  document.getElementById("celticSpan").innerHTML = `${article} ${celticSign}`;
+
+});
 
 
 

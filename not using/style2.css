@@ -177,6 +177,7 @@ section.main {
 #chineseYear {    color:red;}
 #gregorianRed {    color:red;}
 #hebrewRed {    color:red;}
+#celticSpan { color: red}
 
 .hidden {   display:none}
 p.rtl {direction:rtl} 
